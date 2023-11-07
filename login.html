@@ -5,13 +5,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&display=swap" rel="stylesheet">
-    <title>Easigas Rewards | Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Easigas Rewards | Login</title>
 
     <style>
         * {
             --easigas-blue: #154880;
+            --easigas-yellow: #FBD40D;
             font-family: 'Montserrat', Tahoma;
+        }
+
+        body {
+            min-height: max-content;
+            display: flex;
+            flex-direction: row;
         }
 
         .custom-text-blue {
@@ -22,37 +29,82 @@
             font-size: 90px;
             font-weight: 700;
         }
+
+        .input-fields {
+            padding: 60px;
+        }
+
+        .custom-btn-yellow {
+            background-color: var(--easigas-yellow);
+            border: none;
+            color: white;
+            padding: 10px 46px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 14px;
+            text-shadow: 1px 1px 20px #000000b2;
+            box-shadow: 0px 0px 5px #0000006c;
+        }
+
+        .custom-text-input {
+            font-size: 14px;
+        }
+
+        /* media query for mobile */
+        @media only screen and (max-width: 600px) {
+            
+        body {
+            min-height: max-content;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .custom-text-blue {
+            color: var(--easigas-blue);
+            font-size: 40px;
+        }
+
+        .input-fields {
+            padding: 10px;
+        }
+
+        }
     </style>
 </head>
 
-<body>
-    <div class="d-flex flex-row">
-        <div class="d-flex flex-column col">
+    <body class=" align-items-center ">
+        <div class="d-flex flex-column col text-center input-fields">
             <p class="custom-text-blue custom-header-blue">Welcome</p>
             
             <!-- login credentials: email address and password input fields -->
-            <div class="form-floating mb-3">
+            <div class="p-4">
+                <div class="form-floating mb-2 shadow-sm custom-text-input">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
             </div>
+            <!-- 
+                <form class="form-floating">
+                    <input type="email" class="form-control is-invalid" id="floatingInputInvalid" placeholder="name@example.com" value="test@example.com">
+                    <label for="floatingInputInvalid">Invalid input</label>
+                </form>
+             -->
 
-            <div class="form-floating">
+            <div class="form-floating shadow-sm custom-text-input">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
             </div>
 
-            <button type="submit">Login</button>
-        
+            <button type="submit" class="custom-btn-yellow mt-4">Login</button>
+            </div>
         </div>
 
-        <div class="d-flex flex-column col">
+        <div class="d-flex flex-column col ">
             <img src="/assets/easigas-bg-with-logo.jpg" alt="Easigas background" width="100%">
-
         </div>
-        
-    </div>
-    
-</body>
+    </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
