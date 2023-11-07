@@ -34,29 +34,71 @@
             border-bottom: 2px solid var(--easigas-light-blue);
         }
 
+        .nav-link:active {
+            border-top: 3px solid var(--easigas-yellow);
+        }
+
+        .header-container {
+            padding-bottom: 30px;
+        }
+
         .custom-header-image {
             background-image: url("/assets/rewards-header-banner.png");
             background-repeat: no-repeat;
-            background-size: cover;
-            height: 58%;
+            background-size: contain;
+            height: 57%;
             width: 100%;
-            background-position: center;
-          
+            flex-grow: 1;
         }
 
         .padding-left {
             padding-left: 20px;
         }
 
-        .image-container {
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            border: 1px solid var(--easigas-light-blue);
-            padding: 0px;
-            border-radius: 12px;
-            
-            
+        .images-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .custom-container-padding {
+            padding-left: 10%;
+            padding-right: 10%;
+        }
+
+        /* media query for mobile */
+        @media only screen and (max-width: 600px) {
+            .custom-header-image {
+                background-image: url("/assets/rewards-header-mobile.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 43%;
+                width: 100%;
+            }
+
+            .header-container {
+                padding-bottom: 0px;
+            }
+
+            .images-container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        /* media query from 601 to 845px */
+        @media only screen and (min-width: 601px) and (max-width: 845px) {
+            .custom-header-image {
+                background-image: url("/assets/rewards-header-mobile.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                height: 43%;
+                width: 100%;
+                background-position: center;
+            }
+
+            .header-container {
+                padding-bottom: 10px;
+            }
+
         }
     </style>
 </head>
@@ -67,24 +109,21 @@
         </div>
 
         <div class="nav-item d-flex flex-row ">
-            <a class="nav-link active custom-text-blue fw-bolder border-top border-3 " aria-current="page" href="#">My Details</a>
-            <a class="nav-link custom-text-blue fw-bolder" href="#">Rewards</a>       
+            <a class="nav-link  custom-text-blue fw-bolder" href="login.html">My Details</a>
+            <a class="nav-link  custom-text-blue fw-bolder" aria-current="page" href="rewards.html">Rewards</a>       
         </div>
     </nav>
     
     <section>
-        <div class="padding-left">
-            <div class="custom-header-image"></div>
+        <div class="header-container padding-left ">
+            <div class="custom-header-image padding-left"></div>
         </div>
 
-        <div class="d-flex flex-column p-5 text-center w-50 mx-auto">
+        <div class="d-flex flex-column custom-container-padding text-center  ">
             <span class="custom-bg-blue">Virtual Mall</span>
             <span class="custom-bg-grey">Fast Food/Restaurant</span>
 
-            <div class="d-flex flex-row justify-content-center gap-1 py-4">
-                <div>
-                    
-                </div>
+            <div class="images-container justify-content-center gap-2 py-4 px-5">
                 <img src="/assets/KFC_logo.svg.png" alt="KFC_logo" width="100%" class="border p-5 rounded-3">
                 <img src="/assets/steers-logo.png" alt="Steers logo"  width="100%" class="border p-5 rounded-3">
                 <img src="/assets/spur-logo.jpg" alt="Spur logo" width="100%" class="border p-5 rounded-3">
