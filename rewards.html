@@ -9,7 +9,7 @@
     <title>Easigas Rewards | Rewards</title>
 
     <style>
-         * {
+        * {
             --easigas-blue: #154880;
             --easigas-light-blue: #5c80a6;
             --easigas-yellow: #FBD40D;
@@ -39,7 +39,7 @@
         }
 
         .nav-link:active {
-            border-top: 3px solid var(--easigas-yellow);
+            border-top: 3px solid var(--easigas-yellow)!important;
         }
 
         .header-container {
@@ -98,6 +98,10 @@
             flex-direction: row;
         }
 
+        .image-title {
+            display: none;
+        }
+
         .custom-container-padding {
             padding-left: 10%;
             padding-right: 10%;
@@ -120,6 +124,10 @@
             .images-container {
                 display: flex;
                 flex-direction: column;
+            }
+
+            .image-title {
+                display: block;
             }
 
             .bottom-left-border {
@@ -160,6 +168,8 @@
                 top: 35%;
                 left: 18%;
             }
+
+      
         }
     </style>
 </head>
@@ -186,13 +196,18 @@
         </div>
         
         <div class="d-flex flex-column custom-container-padding text-center  ">
-            <span class="custom-bg-blue">Virtual Mall</span>
-            <span class="custom-bg-grey">Fast Food/Restaurant</span>
+            <span class="custom-bg-blue rounded-top">Virtual Mall</span>
+            <span class="custom-bg-grey rounded-bottom">Fast Food/Restaurant</span>
 
             <div class="images-container justify-content-center gap-2 py-4 px-5">
                 <img src="/assets/KFC_logo.svg.png" alt="KFC_logo" width="100%" class="border p-5 rounded-3">
+                <p class="image-title">KFC</p>   
+
                 <img src="/assets/steers-logo.png" alt="Steers logo"  width="100%" class="border p-5 rounded-3">
+                <p class="image-title">Steers</p>
+
                 <img src="/assets/spur-logo.jpg" alt="Spur logo" width="100%" class="border p-5 rounded-3">
+                <p class="image-title">Spur</p>
             </div>
         </div>
     </section>
