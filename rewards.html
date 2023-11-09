@@ -42,6 +42,9 @@
             border-top: 3px solid var(--easigas-yellow)!important;
         }
 
+        .nav-link:hover {
+            color: var(--easigas-light-blue);
+        }
         .header-container {
             padding-bottom: 30px;
         }
@@ -73,7 +76,7 @@
             border-left: 3px solid rgb(255, 255, 255);
             border-bottom: 3px solid rgb(255, 255, 255);
             border-radius: 0px 0px 0px 10px; 
-            margin: 5px;
+            margin: 6px;
         }
 
         .custom-radius {
@@ -96,7 +99,12 @@
         .images-container {
             display: flex;
             flex-direction: row;
-            
+        }
+
+        .images-container img:hover {
+            scale: 1.03;
+            transition: 0.5s;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1.5px 7px 0 rgba(0, 0, 0, 0.19);
         }
 
         .image-title {
@@ -191,8 +199,8 @@
             <div class="custom-header-image padding-left"></div>
             
            
-            <div class="bottom-left-border custom-bg-blue text-white px-4 py-1 align-items-center fs-5 w-auto custom-radius">
-                <p class="justify-content-center">Rewards</p>
+            <div class="bottom-left-border custom-bg-blue text-white px-4 py-4 d-flex align-items-center fs-5 w-auto custom-radius">
+                <span class="justify-content-center fs-4">Rewards</span>
             </div>
         </div>
         
@@ -211,7 +219,7 @@
                 <p class="image-title">Spur</p>
             </div>
 
-            <div class="images-container justify-content-center gap-2 py-4 px-5">
+            <div class="images-container justify-content-center gap-2 py-1 px-5">
                 <img src="/assets/deboniares-logo.jpg" alt="Deboniares Pizza Logo" width="100%" class="border p-5 rounded-3">
                 <p class="image-title">Deboniares Pizza</p>   
 
@@ -222,7 +230,7 @@
                 <p class="image-title">Wimpy</p>
             </div>
 
-            <div class="images-container justify-content-center gap-2 py-4 px-5">
+            <div class="images-container justify-content-center gap-2 py-1 px-5">
                 <img src="/assets/panarottis-logo.png" alt="Panarottis Logo"  class="border p-5 rounded-3">
                 <p class="image-title">Panarottis</p>   
 <!-- 
