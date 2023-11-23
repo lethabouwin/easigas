@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Easigas Rewards | Rewards</title>
+    <title>Easigas Rewards | Redeem Voucher</title>
 
     <style>
         * {
@@ -88,10 +88,10 @@
         }
 
         .custom-header-image {
-            background-image: url("/assets/rewards-header-banner.png");
+            background-image: url("assets/redeem-banner.jpg");
             background-repeat: no-repeat;
             background-size: contain;
-            height: 57%;
+            height: 70%;
             width: 100%;
             flex-grow: 1;
         }
@@ -113,6 +113,7 @@
 
         .image-title {
             display: none;
+            
         }
 
         .custom-container-padding {
@@ -120,10 +121,27 @@
             padding-right: 10%;
         }
 
+        .details-form {
+            padding-left: 20%;
+            padding-right: 20%;
+        }
+
+        .custom-nav-icon {
+            color: yellow;
+        }
+
+        .custom-nav-icon::before {
+            content: '';
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            background-image: url("data:image/svg+xml,%3csvg fill='white' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath d='M2 1h12a2 2 0 012 2v10a2 2 0 01-2 2H2a2 2 0 01-2-2V3a2 2 0 012-2zm10.5 4h-7A1.5 1.5 0 014.99.17V6h6V4zM8.99 .17A1.5'/%3e%3c/svg%3e");
+        }
+
         /* media query for mobile */
         @media only screen and (max-width: 600px) {
             .custom-header-image {
-                background-image: url("/assets/rewards-header-mobile.png");
+                background-image: url("assets/redeem-banner.jpg");
                 background-repeat: no-repeat;
                 background-size: contain;
                 height: 43%;
@@ -154,12 +172,17 @@
                 left: 5%;
             }
 
+            .details-form {
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+
         }
 
         /* media query from 601 to 845px */
         @media only screen and (min-width: 601px) and (max-width: 845px) {
             .custom-header-image {
-                background-image: url("/assets/rewards-header-mobile.png");
+                background-image: url("assets/redeem-banner.jpg");
                 background-repeat: no-repeat;
                 background-size: contain;
                 height: 43%;
@@ -182,19 +205,52 @@
                 left: 18%;
             }
 
+            .details-form {
+                padding-left: 0%;
+                padding-right: 0%;
+            }
+
       
         }
     </style>
 </head>
 <body>
-    <nav class="nav align-items-center justify-content-between custom-nav-border p-3 position-sticky top-0 bg-white">
-        <div class="nav-item">
-            <img src="/assets/easigas-logo-b.jpeg" alt="Easigas logo blue" width="100">
-        </div>
+    <nav class="navbar navbar-expand-md  nav align-items-center justify-content-between custom-nav-border p-3 position-sticky top-0 bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/easigas-logo-b.jpeg" alt="Easigas logo blue" width="130">
+            </a>
+            <button class="navbar-toggler custom-bg-blue text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon custom-nav-icon" ></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" style="color: grey; cursor:default;">Points: [Points] </a>
+                    </li>
+                    <li>
+                        <a class="nav-link custom-text-blue fw-bolder border-top-active">Rewards</a>
+                    </li>
 
-        <div class="nav-item d-flex flex-row ">
-            <a class="nav-link  custom-text-blue fw-bolder" href="login.html">My Details</a>
-            <a class="nav-link  custom-text-blue fw-bolder border-top-active" aria-current="page" href="rewards.html">Rewards</a>       
+                    <li>
+                        <a class="nav-link custom-text-blue fw-bolder" href="mydetails.html">My Details</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link custom-text-blue fw-bolder" href="rules.html">Rules</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link custom-text-blue fw-bolder" href="http://nu6.netuwin.co.za/nu6/participant/ContactUs.php">Contact Us</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link custom-text-blue fw-bolder" href="login.html">Log Out</a>
+                    </li>
+                    <!-- Other nav items -->
+                </ul>
+            </div>
         </div>
     </nav>
     
@@ -203,45 +259,45 @@
             <div class="custom-header-image padding-left"></div>
             
            
-            <div class="bottom-left-border custom-bg-blue text-white px-4 py-4 d-flex align-items-center fs-5 w-auto custom-radius">
+            <!-- <div class="bottom-left-border custom-bg-blue text-white px-4 py-4 d-flex align-items-center fs-5 w-auto custom-radius">
                 <span class="justify-content-center fs-4">Rewards</span>
-            </div>
+            </div> -->
         </div>
         
-        <div class="d-flex flex-column custom-container-padding text-center  ">
+        <div class="d-flex flex-column custom-container-padding text-center pb-5 ">
             <span class="custom-bg-blue rounded-top">Virtual Mall</span>
             <span class="custom-bg-grey rounded-bottom">Fast Food/Restaurant</span>
 
             <div class="images-container justify-content-center gap-2 py-4 px-5">
-                <img src="/assets/KFC_logo.svg.png" alt="KFC_logo" width="100%" class="border p-5 rounded-3">
+                <img src="assets/KFC_logo.svg.png" alt="KFC_logo" width="100%" class="border p-5 rounded-3">
                 <p class="image-title">KFC</p>   
 
-                <img src="/assets/steers-logo.png" alt="Steers logo"  width="100%" class="border p-5 rounded-3">
+                <img src="assets/steers-logo.png" alt="Steers logo"  width="100%" class="border p-5 rounded-3">
                 <p class="image-title">Steers</p>
 
-                <img src="/assets/spur-logo.jpg" alt="Spur logo" width="100%" class="border p-5 rounded-3">
+                <img src="assets/spur-logo.jpg" alt="Spur logo" width="100%" class="border p-5 rounded-3">
                 <p class="image-title">Spur</p>
             </div>
 
             <div class="images-container justify-content-center gap-2 py-1 px-5">
-                <img src="/assets/deboniares-logo.jpg" alt="Deboniares Pizza Logo" width="100%" class="border p-5 rounded-3">
+                <img src="assets/deboniares-logo.jpg" alt="Deboniares Pizza Logo" width="100%" class="border p-5 rounded-3">
                 <p class="image-title">Deboniares Pizza</p>   
 
-                <img src="/assets//nandos-logo.png" alt="Nando's logo"  width="100%" class="border p-5 rounded-3">
+                <img src="assets//nandos-logo.png" alt="Nando's logo"  width="100%" class="border p-5 rounded-3">
                 <p class="image-title">Nando's</p>
 
-                <img src="/assets/wimpy-logo.jpg" alt="Wimpy logo" width="100%" class="border p-5 rounded-3">
+                <img src="assets/wimpy-logo.jpg" alt="Wimpy logo" width="100%" class="border p-5 rounded-3">
                 <p class="image-title">Wimpy</p>
             </div>
 
             <div class="images-container justify-content-center gap-2 py-1 px-5">
-                <img src="/assets/panarottis-logo.png" alt="Panarottis Logo"  class="border p-5 rounded-3">
+                <img src="assets/panarottis-logo.png" alt="Panarottis Logo"  class="border p-5 rounded-3">
                 <p class="image-title">Panarottis</p>   
 <!-- 
-                <img src="/assets//nandos-logo.png" alt="Nando's logo"  width="100%" class="border p-5 rounded-3">
+                <img src="assets//nandos-logo.png" alt="Nando's logo"  width="100%" class="border p-5 rounded-3">
                 <p class="image-title">Nando's</p>
 
-                <img src="/assets/wimpy-logo.jpg" alt="Wimpy logo" width="100%" class="border p-5 rounded-3">
+                <img src="assets/wimpy-logo.jpg" alt="Wimpy logo" width="100%" class="border p-5 rounded-3">
                 <p class="image-title">Wimpy</p> -->
             </div>
         </div>
